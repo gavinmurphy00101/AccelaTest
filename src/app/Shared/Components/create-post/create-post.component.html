@@ -1,0 +1,34 @@
+<!-- <div class="createPostCtn">
+  <ion-button color="success" (click)="dismiss()">
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </ion-button>
+</div> -->
+
+<div class="loginFormCtn">
+  <div>
+    <h2 class="loginBanner">
+      Enter your message
+      <span class="closeButton">
+        
+      </span>
+    </h2>
+
+    <form [formGroup]="postForm" (ngSubmit)="submit()">
+      <ion-item class="top-spacer">
+        <ion-label>Title</ion-label>
+        <ion-input formControlName="title" type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item class="top-spacer">
+        <ion-label>Body</ion-label>
+        <ion-textarea
+        value="Enter your message here"
+        formControlName="body"
+        ></ion-textarea>
+      </ion-item>
+      <ion-button expand="block" type="submit"   color="success" class="submitStyle">Submit</ion-button>
+    </form>
+  </div>
+</div>
+
+

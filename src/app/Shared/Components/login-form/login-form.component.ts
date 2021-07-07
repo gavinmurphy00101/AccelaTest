@@ -11,19 +11,19 @@ export class LoginFormComponent implements OnInit {
 
   @Output() emailEvent = new EventEmitter<string>();
 
-private testForm : FormGroup;
+  private testForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.testForm = this.formBuilder.group({
       email: ['', Validators.required]
-    })
+    });
    }
 
   ngOnInit() {}
 
   submit(){
       const email = this.testForm.value.email;
-      this.emailEvent.emit(email); 
+      this.emailEvent.emit(email);
   }
 
 }

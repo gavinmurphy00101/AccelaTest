@@ -20,9 +20,8 @@ export class LoginPage implements OnInit {
     this.dataService.getUsers(email).subscribe(res=>{
 
       localStorage.setItem('users', JSON.stringify(res));
-      return this.router.navigate(['/tabs/tab1'])
-        
-    }) 
+      return this.router.navigate(['/tabs/tab1']);
+    }) ;
   }
 
 }

@@ -12,15 +12,13 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  public getUsers(email) : Observable<{}>{
+  public getUsers(email): Observable<{}>{
     const url = 'https://jsonplaceholder.typicode.com/users?email=' + email;
     return this.http.get(url);
   }
 
   public getPosts(){
     const url = 'https://jsonplaceholder.typicode.com/posts'
-    return this.http.get(url)
+    return this.http.get(url);
   }
-
-  
 }

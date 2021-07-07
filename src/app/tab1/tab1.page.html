@@ -5,9 +5,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <div class="addBtnCtn">
+    <ion-button color="success" (click)="presentModal()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </div>
   
-  <div *ngFor="let post of userPosts">
-    
+  <div *ngFor="let post of userPosts">  
     <app-card [title]="post.title" [body]="post.body"></app-card>
   </div>
  

@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
   
   <div *ngFor="let post of otherPosts">
-    <app-card [title]="post.title" [body]="post.body"></app-card>
+    <app-card [title]="post.title" [body]="post.body" [showUserId]="post.userId"></app-card>
   </div>
   
 </ion-content>
