@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  public otherPosts: Array<{}> = [];
+
   constructor() {}
+
+  ionViewWillEnter(){
+    this.otherPosts = JSON.parse(localStorage.getItem('otherPosts'));  
+  }
 
 }

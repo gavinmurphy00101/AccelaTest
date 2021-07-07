@@ -1,0 +1,14 @@
+<div class="loginFormCtn">
+  <div>
+    <h2 class="loginBanner">
+      Please enter your email
+    </h2>
+    <form [formGroup]="testForm" (ngSubmit)="submit()">
+      <ion-item class="top-spacer">
+        <ion-label>Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+      <ion-button expand="block" type="submit"  [disabled]="!testForm.valid" color="success" class="submitStyle">Enter</ion-button>
+    </form>
+  </div>
+</div>

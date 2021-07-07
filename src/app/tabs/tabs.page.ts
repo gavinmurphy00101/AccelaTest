@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  logout(){
+    localStorage.removeItem('users');
+    localStorage.removeItem('userPosts');
+    localStorage.removeItem('otherPosts');
+    this.router.navigate(['/login'])
+  }
+
+  constructor(private router: Router) {}
 
 }
